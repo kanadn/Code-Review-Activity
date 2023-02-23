@@ -1,21 +1,23 @@
-// Optimized JavaScript program for fizz buzz problem
-// optimized because % is a heavy op
-let s = "";
-let c3 = 0, c5 = 0;
-for (var i = 1; i <= 100; i++) {
-    c3++;
-    c5++;
-    if (c3 == 3) {
-        s += "fizz";
-        c3 = 0;
+let i;
+    for (i=1; i<=100; i++)
+    {         
+        // number divisible by 3? print 'Fizz'
+        // in place of the number
+        else if ((i%3) == 0)
+            document.write("Fizz" + " ");               
+         
+        // number divisible by 5, print 'Buzz'
+        // in place of the number
+        else if ((i%5) == 0)                   
+            document.write("Buzz" + " "); 
+
+
+        // number divisible by 3 and 5 will
+        // always be divisible by 15, print
+        // 'FizzBuzz' in place of the number
+        if (i%15 == 0)   
+            document.write("FizzBuzz" + " ");              
+     
+        else // print the number       
+            document.write(i + " ");               
     }
-    if (c5 == 5) {
-        s += "buzz";
-        c5 = 0;
-    }
-    if (s.length == 0)
-        console.log(i);
-    else
-        console.log(s);
-    s = "";
-}
